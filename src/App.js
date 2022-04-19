@@ -25,9 +25,14 @@ function Hello() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const newExpenseHandler = expense =>{
+    console.log('In App.js');
+    console.log(expense)
+  }
   return (
     <div className="app-div">
-      <NewExpense/>
+      <NewExpense newExpense = {newExpenseHandler}/>
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
