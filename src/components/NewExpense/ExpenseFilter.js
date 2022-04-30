@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './ExpensesFilter.css';
+import './ExpenseFilter.css';
 
-const ExpensesFilter = () => {
+const ExpenseFilter = (props) => {
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
-        <select>
+        <select onChange={props.selectedYear()}>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
@@ -18,4 +18,4 @@ const ExpensesFilter = () => {
   );
 };
 
-export default ExpensesFilter;
+export default ExpenseFilter;
